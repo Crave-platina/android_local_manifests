@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- Remotes -->
+    <remote name="main"
+        fetch="https://github.com/username/" />
+    <remote name="rom"
+        fetch="https://github.com/ExampleROM/" />
+    <remote name="device"
+        fetch="https://github.com/ExampleROM-device/" />
+
+    <!-- Device Sources -->
+    <project path="device/manufacturer/codename" name="android_device_manufacturer_codename" remote="device" revision="device-branch" clone-depth="1" />
+    <project path="kernel/manufacturer/codename" name="android_kernel_manufacturer_codename" remote="main" revision="kernel-branch" clone-depth="1" />
+    <project path="vendor/manufacturer/codename" name="android_vendor_manufacturer_codename" remote="device" revision="vendor-branch" clone-depth="1" />
+
+    <!-- ROM Sources -->
+    <project path="hardware/sample" name="android_hardware_sample" remote="rom" revision="rom-branch" clone-depth="1" />
+    <remove-project name="android_packages_apps_SampleApp" />
+    <project path="packages/apps/SampleApp" name="android_packages_apps_SampleApp" remote="rom" revision="rom-branch" clone-depth="1" />
+
+</manifest>
