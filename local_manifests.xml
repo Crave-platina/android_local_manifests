@@ -3,20 +3,23 @@
 
     <!-- Remotes -->
     <remote name="main"
-        fetch="https://github.com/username/" />
+        fetch="https://github.com/hanifardhani/" />
     <remote name="rom"
-        fetch="https://github.com/ExampleROM/" />
+        fetch="https://github.com/AndroidOne-Experience/" />
     <remote name="device"
-        fetch="https://github.com/ExampleROM-device/" />
+        fetch="https://github.com/Crave-platina/" />
 
     <!-- Device Sources -->
-    <project path="device/manufacturer/codename" name="android_device_manufacturer_codename" remote="device" revision="device-branch" clone-depth="1" />
-    <project path="kernel/manufacturer/codename" name="android_kernel_manufacturer_codename" remote="main" revision="kernel-branch" clone-depth="1" />
-    <project path="vendor/manufacturer/codename" name="android_vendor_manufacturer_codename" remote="device" revision="vendor-branch" clone-depth="1" />
+    <project path="device/xiaomi/platina" name="android_device_xiaomi_platina" remote="device" revision="aosp" clone-depth="1" />
+    <project path="kernel/xiaomi/platina" name="platinum_kernel_xiaomi_platina" remote="main" revision="eas-bpf-new-vic" clone-depth="1" />
+    <project path="vendor/xiaomi/platina" name="android_vendor_xiaomi_platina" remote="device" revision="aosp" clone-depth="1" />
 
     <!-- ROM Sources -->
-    <project path="hardware/sample" name="android_hardware_sample" remote="rom" revision="rom-branch" clone-depth="1" />
-    <remove-project name="android_packages_apps_SampleApp" />
-    <project path="packages/apps/SampleApp" name="android_packages_apps_SampleApp" remote="rom" revision="rom-branch" clone-depth="1" />
+    <remove-project name="build_soong" />
+    <project path="build/soong" name="android_build_soong" remote="device" revision="aosp" clone-depth="1" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+    <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="device" revision="lineage-22.2" clone-depth="1" />
 
 </manifest>
