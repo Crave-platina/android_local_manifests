@@ -37,6 +37,8 @@
 
     <remove-project name="platform/packages/apps/Camera2" />
     <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="packages_apps_ColumbusService" />
+    <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="device" revision="aosp-15" clone-depth="1" />
     <remove-project name="packages_apps_DocumentsUI" />
     <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="device" revision="aosp-15" clone-depth="1" />    
     <remove-project name="platform/packages/apps/KeyChain" />
