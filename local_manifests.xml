@@ -15,18 +15,74 @@
     <project path="vendor/xiaomi/platina" name="android_vendor_xiaomi_platina" remote="device" revision="aosp-15" clone-depth="1" />
 
     <!-- ROM Sources -->
+    <remove-project name="art" />
+    <project path="art" name="android_art" remote="device" revision="aosp-15" clone-depth="1" />
+
+    <remove-project name="build_release" />
+    <project path="build/release" name="android_build_release" remote="device" revision="aosp-15" clone-depth="1" />
     <remove-project name="build_soong" />
     <project path="build/soong" name="android_build_soong" remote="device" revision="aosp-15" clone-depth="1" >
         <linkfile src="root.bp" dest="Android.bp" />
         <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
 
+    <remove-project name="platform/external/freetype" />
+    <project path="external/freetype" name="android_external_freetype" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/external/libhevc" />
+    <project path="external/libhevc" name="android_external_libhevc" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/external/libpng" />
+    <project path="external/libpng" name="android_external_libpng" remote="los" revision="lineage-22.2" clone-depth="1" />
+
+    <remove-project name="frameworks_av" />
+    <project path="frameworks/av" name="android_frameworks_av" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="frameworks_base" />
+    <project path="frameworks/base" name="android_frameworks_base" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="frameworks_native" />
+    <project path="frameworks/native" name="android_frameworks_native" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="frameworks_opt_telephony" />
+    <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="device" revision="aosp-15" clone-depth="1" />
+
+    <remove-project name="hardware_interfaces" />
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="device" revision="aosp-15" clone-depth="1" />
     <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="los" revision="lineage-22.2" clone-depth="1" />
 
     <remove-project name="platform/packages/apps/Camera2" />
     <project path="packages/apps/Aperture" name="android_packages_apps_Aperture" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/packages/apps/Car/Settings" />
+    <project path="packages/apps/Car/Settings" name="android_packages_apps_Car_Settings" remote="los" revision="lineage-22.2" clone-depth="1" />
     <remove-project name="packages_apps_ColumbusService" />
     <project path="packages/apps/ColumbusService" name="android_packages_apps_ColumbusService" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="packages_apps_DocumentsUI" />
+    <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="device" revision="aosp-15" clone-depth="1" />    
+    <remove-project name="platform/packages/apps/KeyChain" />
+    <project path="packages/apps/KeyChain" name="android_packages_apps_KeyChain" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="packages_apps_ManagedProvisioning" />
+    <project path="packages/apps/ManagedProvisioning" name="android_packages_apps_ManagedProvisioning" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="packages_apps_Settings" />
+    <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="platform/packages/apps/TV" />
+    <project path="packages/apps/TV" name="android_packages_apps_TV" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="platform/packages/apps/TvSettings" />
+    <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="platform/packages/providers/ContactsProvider" />
+    <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/packages/providers/DownloadProvider" />
+    <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="device" revision="aosp-15" clone-depth="1" />
+    <remove-project name="platform/packages/providers/TelephonyProvider" />
+    <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/packages/services/BuiltInPrintService" />
+    <project path="packages/services/BuiltInPrintService" name="android_packages_services_BuiltInPrintService" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="packages_services_Telecomm" />
+    <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="device" revision="aosp-15" clone-depth="1" />
+
+    <remove-project name="platform/system/incremental_delivery" />
+    <project path="system/incremental_delivery" name="android_system_incremental_delivery" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/system/libfmq" />
+    <project path="system/libfmq" name="android_system_libfmq" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="platform/system/libufdt" />
+    <project path="system/libufdt" name="android_system_libufdt" remote="los" revision="lineage-22.2" clone-depth="1" />
+    <remove-project name="system_media" />
+    <project path="system/media" name="android_system_media" remote="device" revision="aosp-15" clone-depth="1" />
 
     <remove-project name="vendor_certification" />
 
